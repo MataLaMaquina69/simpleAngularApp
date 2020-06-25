@@ -1,8 +1,29 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+ <div class="container">
+
+    <form action="" class="form-group">
+        <input placeholder="Busque un cliente" (input)="buscarClientes($event.target.value)" type="text" class="form-control"> 
+
+    </form>
+
+    <button routerLink="/agregar-Clientes" class="btn btn-primary"> Agregar cliente nuevo </button>
+
+    <div class="row mt-4">
+        <div class="col-sm-3" *ngFor="let cliente of clientes">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{cliente.nombre}}</h5>
+                  <p class="card-subtitle">{{cliente.apellido}}</p>
+                  <p class="card-text">{{cliente.direccion}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+        </div>
+
+        
     </div>
-  </div>
+    
+
+
+ </div>
+
