@@ -12,6 +12,9 @@ import { ClienteService } from './services/cliente.service';
 import { ProductoComponent } from './producto/producto.component';
 import { AgregarProductosComponent } from './agregar-productos/agregar-productos.component';
 import { ProductosService } from './services/productos.service';
+import { PedidoComponent } from './pedido/pedido.component';
+import { PedidosService } from './services/pedidos.service';
+import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { ProductosService } from './services/productos.service';
     EncabezadoComponent,
     AgregarClienteComponent,
     ProductoComponent,
-    AgregarProductosComponent
+    AgregarProductosComponent,
+    PedidoComponent,
+    ListadoPedidosComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { ProductosService } from './services/productos.service';
   ],
   providers: [
     ClienteService,
-    ProductosService
+    ProductosService,
+    PedidosService
 
   ],
   bootstrap: [AppComponent]

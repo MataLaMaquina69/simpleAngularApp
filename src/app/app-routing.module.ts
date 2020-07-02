@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { AgregarClienteComponent } from './agregar-cliente/agregar-cliente.component';
 import { AgregarProductosComponent } from './agregar-productos/agregar-productos.component';
 import { ProductoComponent } from './producto/producto.component';
+import { PedidoComponent } from './pedido/pedido.component';
+import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,12 @@ const routes: Routes = [
   },
   {
     path: 'productos', component: ProductoComponent
+  },
+  {
+    path: 'pedidos', component: PedidoComponent
+  },
+  {
+    path: 'listado-pedidos', component: ListadoPedidosComponent
   }
 
 ];

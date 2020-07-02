@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="cliente">
+        <h5>Cliente:{{this.pedidoServicio.pedido.nombreCliente}} </h5>
+        <h6>Total: {{this.pedidoServicio.pedido.total  | currency: 'Mxn'}} </h6>
+    </div>
+    <div class="detalle">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Eliminar</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of this.pedidoServicio.pedido.pedidoDetalle; let posicion= index">
+                
+                <td>{{producto.nombreProducto}}</td>
+                <td>{{producto.productoID}}</td>
+                <td> <input (input)="calcularTotal(posicion)" [(ngModel)]="producto.cantidad" type="text">   </td>
+                <td>{{producto.precio | currency: 'Mxn'}}</td>
+                <td>{{producto.total | currency: 'Mxn'}}</td>
+                <td><button class="btn btn-danger" (click)="eliminar(posicion)">Eliminar</button></td>
+
+                
+              </tr>
+              
+            </tbody>
+          </table>
+
+          <button class="btn btn-primary" (click)="guardar()">Guardar</button>
+
+    </div>
+</div>
